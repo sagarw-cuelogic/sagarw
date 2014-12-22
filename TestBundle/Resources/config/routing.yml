@@ -1,0 +1,23 @@
+acme_test_homepage:
+    pattern:  /
+    defaults: { _controller: AcmeTestBundle:Default:index }
+
+test_about:
+    pattern:  /about
+    defaults: { _controller: AcmeTestBundle:Default:about }
+
+test_join:
+    pattern:  /join
+    defaults: { _controller: AcmeTestBundle:Default:joinme }
+
+test_client:
+    pattern:  /client
+    defaults: { _controller: AcmeTestBundle:Default:client }
+
+test_terms:
+    pattern:  /terms
+    defaults: { _controller: AcmeTestBundle:Default:terms }
+
+test_sendmail:
+    pattern:  /sendmail
+    defaults: { _controller: AcmeTestBundle:Default:sendEmail }

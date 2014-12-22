@@ -1,0 +1,28 @@
+Acme\TestBundle\Entity\JoinUs:
+   properties:
+    email:
+     - NotBlank: { message : "Email Address is required" }
+     - Email: { message : "Invalid Email Address " }
+    firstName:
+     - NotBlank: { message: "First name is required"}
+     - Type: 
+        type: alpha
+        message: First Name should be string
+    lastName:
+     - NotBlank: { message: "Last name is required" }
+     - Type: 
+        type: alpha
+        message: last Name should be string
+    address:
+     - NotBlank: { message: "Address is required" }
+    birthDate:
+     - Date: {message: "Birth date is required"}
+     - Acme\TestBundle\Validator\Constraints\AgeValidation: ~ 
+    phone:
+     - NotBlank: {message :"Phone number is required"}
+     - Acme\TestBundle\Validator\Constraints\PhoneValidation: ~ 
+     - Length:
+        min: 10
+        minMessage: "Mininum 10 Length required"
+        
+      
