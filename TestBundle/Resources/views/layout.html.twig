@@ -9,12 +9,17 @@
 <body>
 <div class="header">
 <h3 style="padding:4px;">CUELOGIC</h3>
+<div style="float:right;position:relative;top:-40px;">
+<a href="{{path('test_login')}}"><span style='color:#fff'>Login</span></a>&nbsp;|&nbsp;
+<a href="{{path('test_mail')}}"><span style='color:#fff'>Mail Us</span></a>
+</div>
 </div>
 <div style="margin-bottom:5px;" class="links">
-<a href="{{path('acme_test_homepage')}}">Home</a>
+<a href="{{path('test_homepage')}}">Home</a>
 <a href="{{path('test_about')}}">About Me</a>
 <a href="{{path('test_join')}}">Join Us</a>
 <a href="{{path('test_client')}}">Client</a>
+<a href="{{path('test_photos')}}">Gallery</a>
 </div>
 
 {% block middle%}

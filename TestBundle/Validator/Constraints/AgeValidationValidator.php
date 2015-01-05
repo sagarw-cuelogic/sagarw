@@ -13,7 +13,7 @@ class AgeValidationValidator extends ConstraintValidator
 		$day=idate('d',$value->getTimestamp());
 		$d=$year."-".$month."-".$day;
 		
-		$user_date=date_create($d);
+		
 		$sys_date=date('Y-m-d');
 		
 

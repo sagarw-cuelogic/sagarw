@@ -24,5 +24,49 @@ Acme\TestBundle\Entity\JoinUs:
      - Length:
         min: 10
         minMessage: "Mininum 10 Length required"
-        
-      
+Acme\TestBundle\Entity\Login:
+   properties:
+     userName:
+     - NotBlank: {message: "User Name is required"}
+     password:
+     - NotBlank: {message: "Password is required"}
+Acme\TestBundle\Entity\Registeration:
+  properties:
+   firstName:
+    - NotBlank: {message: "First Name is required"}
+    - Type: 
+       type: alpha
+       message: First Name should be string
+   lastName:
+    - NotBlank: {message: "Last Name is required"}
+    - Type: 
+       type: alpha
+       message: Last Name should be string
+   password:
+    - NotBlank: {message: "Password is required"}
+    - Length: 
+       min: 6
+       minMessage: Password must be alteast 6 Length
+   email:
+     - NotBlank: { message : "Email Address is required" }
+     - Email: { message : "Invalid Email Address " }
+   birthDate:
+     - Date: {message: "Birth date is required"}
+     - Acme\TestBundle\Validator\Constraints\AgeValidation: ~
+Acme\TestBundle\Entity\SendEmail:
+  properties:
+    senderEmail:
+     - NotBlank: { message : "Email Address is required" }
+     - Email: { message : "Invalid Email Address " }
+    body:
+     - NotBlank: { message : "Please enter content" }
+Acme\TestBundle\Entity\Photos:
+  properties:
+    photo_name:
+     - NotBlank: { message : "Please choose file" }
+
+     
+
+
+
+

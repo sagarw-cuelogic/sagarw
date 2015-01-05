@@ -6,7 +6,7 @@
 
 {% block middle %}
 <div class="middle">
-Welcome to Join page
+Welcome to Registration page
 
 {% for flashMessage in app.session.flashbag.get('notice') %}
  
@@ -17,7 +17,7 @@ Welcome to Join page
 
 <div class="form">
 {{ form_start(form , {attr :{novalidate:'novalidate'}}) }}
-<div style='width:500px;'>
+<div style='width:500px;height:35px;float:left;'>
 	{{ form_label(form.firstName) }}
 	
 	{{ form_widget(form.firstName) }}
@@ -26,24 +26,35 @@ Welcome to Join page
 	</div>
 </div>
 
-<div style='width:500px;'>
+<div style='width:500px;height:35px;float:left;'>
 	{{ form_label(form.lastName) }}
 	
 	{{ form_widget(form.lastName) }}
 	<div class='errors'>
 	{{ form_errors(form.lastName) }}
 	</div>
-</div>	
+</div>
 
-<div style='width:500px;'>
-	{{ form_label(form.address) }}
+<div style='width:500px;height:35px;float:left;'>
+	{{ form_label(form.password.first) }}
 	
-	{{ form_widget(form.address) }}
+	{{ form_widget(form.password.first) }}
 	<div class='errors'>
-	{{ form_errors(form.address) }}
+	{{ form_errors(form.password.first) }}
 	</div>
 </div>
-<div style='width:500px;'>
+<div style='width:500px;height:35px;float:left;'>
+	{{ form_label(form.password.second) }}
+	
+	{{ form_widget(form.password.second) }}
+	<div class='errors'>
+	{{ form_errors(form.password.second) }}
+	</div>
+</div>
+
+
+
+<div style='width:500px;height:35px;float:left;'>
 	{{ form_label(form.email) }}
 	
 	{{ form_widget(form.email) }}
@@ -51,15 +62,8 @@ Welcome to Join page
 	{{ form_errors(form.email) }}
 	</div>
 </div>
-<div style='width:500px;'>
-	{{ form_label(form.phone) }}
-	
-	{{ form_widget(form.phone) }}
-	<div class='errors'>
-	{{ form_errors(form.phone) }}
-	</div>
-</div>
-<div style='width:500px;'>
+
+<div style='width:500px;height:35px;float:left;'>
 	{{ form_label(form.birthDate) }}
 	
 	{{ form_widget(form.birthDate) }}

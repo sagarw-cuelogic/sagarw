@@ -53,6 +53,11 @@ text-decoration: none;
 	float:left;
 	width:100px;
 }
+.form .files label
+{
+	width: 160px;
+	float: none;
+}
 .errors
 {
 	color:red;
@@ -69,4 +74,10 @@ ul ,ol
 	background:#FFF;
 	width:500px;
 	margin-bottom:10px;
+}
+ul.photos li {
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    padding:10px;
 }

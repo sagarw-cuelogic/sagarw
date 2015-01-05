@@ -1,0 +1,35 @@
+<html>
+<title>Home Page</title>
+<head>
+{% stylesheets '@AcmeTestBundle/Resources/public/css/*' filter="cssrewrite" %}
+                <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+</head>
+<body>
+<div class="header">
+<h3 style="padding:4px;">CUELOGIC</h3>
+<div style="float:right;position:relative;top:-40px;">
+<a href="{{path('test_logout')}}"><span style='color:#fff'>Logout</span></a>
+</div>
+</div>
+<div class="middle">
+<h4>Welcome {{app.session.get('name')}} to profile page!</h4>
+{% for flashMessage in app.session.flashbag.get('notice') %}
+ 
+<div style='color:red;font-size:12px;'>{{ flashMessage }}</div>
+ 
+{% endfor %}
+
+<div style='font-size:15px;border: 1px solid #333;width:300px;'>
+{% block profile %}	
+		<div ><label style='width:120px;'>FirstName:</label>{{user.firstName}}</div>
+		<div><label style='width:120px;'>LastName:</label>{{user.lastName}}</div>
+		<div><label style='width:120px;'>Email:</label>{{user.Email}}</label></div>
+		
+{% endblock %}
+</div>
+
+</form>
+</div>
+</body>
+</html>
