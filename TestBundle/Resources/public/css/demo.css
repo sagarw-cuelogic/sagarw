@@ -1,0 +1,83 @@
+body
+{
+margin: 0;
+/*background:#f1f1f1;*/
+}
+.links a {
+font-size: 15px;
+background: orange;
+color: #fff;
+padding: 5px;
+margin-bottom: 10px;
+text-decoration: none;
+}
+.header
+{
+	background: #00476b;
+	color:#fff;
+	height:30px;
+	margin-bottom: 5px;
+}
+.middle
+{
+	/*border:2px solid #333;*/
+	width:100%;
+	font-size: 20px;
+	height:77%;
+}
+.footer
+{
+	background: #00476b;
+	color:#fff;
+	height:20px;
+	text-align: center;
+	margin: 0;
+}
+.terms
+{
+	color:#fff;
+	font-size: 15px;
+	text-decoration: none;
+}
+.form
+{
+	font-size:12px;
+	overflow-x:hidden;
+	width:600px;
+	margin-left:10px;
+	padding:20px;
+	border:2px solid #444;
+}
+.form label
+{
+	float:left;
+	width:100px;
+}
+.form .files label
+{
+	width: 160px;
+	float: none;
+}
+.errors
+{
+	color:red;
+	float:right;
+	width:240px;
+	margin-top: -20px;
+}
+ul ,ol
+{
+	list-style: none;
+}
+.clients li
+{
+	background:#FFF;
+	width:500px;
+	margin-bottom:10px;
+}
+ul.photos li {
+    width: 130px;
+    display: inline-block;
+    vertical-align: top;
+    padding:10px;
+}

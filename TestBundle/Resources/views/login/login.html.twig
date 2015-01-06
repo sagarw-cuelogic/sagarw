@@ -1,0 +1,55 @@
+{% extends 'AcmeTestBundle::layout.html.twig'%}
+
+{% block content %}
+	{{ parent() }}	
+{% endblock %}
+
+{% block middle %}
+<div class="middle">
+Welcome to Login page
+
+{% for flashMessage in app.session.flashbag.get('notice') %}
+ 
+<div style='color:red;font-size:12px;'>{{ flashMessage }}</div>
+ 
+{% endfor %}
+
+
+<div class="form">
+{{ form_start(form , {attr :{novalidate:'novalidate'}}) }}
+<div style='width:500px;'>
+	{{ form_label(form.userName) }}
+	
+	{{ form_widget(form.userName) }}
+	<div class='errors'>
+	{{ form_errors(form.userName) }}
+	</div>
+</div>
+
+<div style='width:500px;'>
+	{{ form_label(form.password) }}
+	
+	{{ form_widget(form.password) }}
+	<div class='errors'>
+	{{ form_errors(form.password) }}
+	</div>
+</div>		
+{{ form_end(form)}}
+
+<div style='width:86px;float:right;position:relative;top:-30px;left:-370px;'>
+{% block link %}
+<a href='{{ path('test_register') }}'>New Register</a>
+{% endblock %}
+</div>
+
+
+
+
+</div>
+
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+{% endblock %}

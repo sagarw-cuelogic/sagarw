@@ -1,0 +1,28 @@
+{% extends 'AcmeTestBundle::layout.html.twig'%}
+
+{% block content %}
+	{{ parent() }}	
+{% endblock %}
+
+{% block middle %}
+<div class="middle">
+Welcome to client page
+<div class='clients'>
+<ul style='list-style:disc'>
+<li>Multi-   Education</li>
+<li>Access GE-  FMGG</li>
+<li>Seventh Generation-  FMGG</li>
+<li>Letu-   Education</li>
+<li>Sprinkles-   Food And beverages</li>
+<li>Shareist-   Media</li>
+<li>MakeSomeTime-   Finance</li>
+<li>Dragonplay-   Game</li>
+<li>Blacklinegps-   Security</li>
+</ul>
+</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+{% endblock %}

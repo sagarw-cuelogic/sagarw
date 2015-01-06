@@ -1,0 +1,55 @@
+test_homepage:
+    pattern:  /
+    defaults: { _controller: AcmeTestBundle:Default:index }
+
+test_about:
+    pattern:  /about
+    defaults: { _controller: AcmeTestBundle:Default:about }
+
+test_join:
+    pattern:  /join
+    defaults: { _controller: AcmeTestBundle:Default:joinme }
+
+test_client:
+    pattern:  /client
+    defaults: { _controller: AcmeTestBundle:Default:client }
+
+test_terms:
+    pattern:  /terms
+    defaults: { _controller: AcmeTestBundle:Default:terms }
+
+test_sendmail:
+    pattern:  /sendmail
+    defaults: { _controller: AcmeTestBundle:Default:sendEmail }
+
+test_mail:
+    pattern:  /email
+    defaults: { _controller: AcmeTestBundle:Default:email }
+
+test_login:
+    pattern: /login
+    defaults: {_controller: AcmeTestBundle:Default:login}
+
+test_logout:
+    pattern: /logout
+    defaults: {_controller: AcmeTestBundle:Default:logout}
+
+test_profile:
+    pattern: /profile
+    defaults: {_controller: AcmeTestBundle:Default:profile}
+
+test_register:
+    pattern: /register
+    defaults: {_controller: AcmeTestBundle:Default:register}
+
+test_photos:
+    pattern: /gallery
+    defaults: {_controller: AcmeTestBundle:Default:gallery}
+
+test_delete:
+    pattern: /delete 
+    defaults: {_controller: AcmeTestBundle:Default:deletePhoto}
+
+test_update:
+    pattern: /update 
+    defaults: {_controller: AcmeTestBundle:Default:updateProfile}
