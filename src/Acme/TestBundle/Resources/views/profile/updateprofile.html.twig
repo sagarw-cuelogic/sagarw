@@ -1,0 +1,78 @@
+<html>
+<title>Home Page</title>
+<head>
+{% stylesheets '@AcmeTestBundle/Resources/public/css/*' filter="cssrewrite" %}
+                <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+</head>
+<body>
+
+<div class="header">
+<h3 style="padding:4px;margin:0;">CUELOGIC</h3>
+<div style="float:right;position:relative;top:-30px;">
+Welcome {{app.session.get('name')}} &nbsp;|&nbsp;<a href="{{path('test_logout')}}"><span style='color:#fff'>Logout</span></a>
+</div>
+</div>
+<div class="links">
+     <a href="{{path('test_profile')}}">Back</a>
+</div>
+<br>
+{% for flashMessage in app.session.flashbag.get('notice') %}
+ 
+<div class='alert alert-success'>{{ flashMessage }}</div>
+ 
+{% endfor %}
+
+<div class="form">
+<h4>Welcome Edit Profile page!</h4>
+{{ form_start(form , {attr :{novalidate:'novalidate'}}) }}
+<div style='width:500px;height:50px;float:left;'>
+	{{ form_label(form.firstName) }}
+	
+	{{ form_widget(form.firstName) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.firstName) }}
+</div>
+
+<div style='width:500px;height:50px;float:left;'>
+	{{ form_label(form.lastName) }}
+	
+	{{ form_widget(form.lastName) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.lastName) }}
+</div>
+
+<div style='width:500px;height:50px;float:left;'>
+	{{ form_label(form.email) }}
+	
+	{{ form_widget(form.email) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.email) }}
+</div>
+
+<div style='width:500px;height:50px;float:left;'>
+	{{ form_label(form.birthDate) }}
+	
+	{{ form_widget(form.birthDate) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.birthDate) }}
+</div>
+<div style='width:500px;height:50px;float:left;'>
+	
+	{{ form_widget(form.Update) }}
+	
+</div>
+
+
+{{ form_end(form)}}
+</div>
+</body>
+</html>

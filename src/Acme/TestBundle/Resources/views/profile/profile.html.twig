@@ -1,0 +1,31 @@
+<html>
+<title>Home Page</title>
+<head>
+{% stylesheets '@AcmeTestBundle/Resources/public/css/*' filter="cssrewrite" %}
+                <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+</head>
+<body>
+
+<div class="header">
+	<h3 style="padding:4px;margin:0;">CUELOGIC</h3>
+	<div style="float:right;position:relative;top:-30px;">
+
+Welcome {{app.session.get('name')}} &nbsp;|&nbsp;<a href="{{path('test_logout')}}"><span style='color:#fff'>Logout</span></a>
+	</div>
+</div>
+
+<div class="middle">
+   <h4>Welcome  to profile page!</h4>
+    <div class="links">
+    <a href="{{path('test_homepage')}}">Home</a>
+	<a href="{{path('test_about')}}">About Me</a>
+	<a href="{{path('test_join')}}">Join Us</a>
+	<a href="{{path('test_client')}}">Client</a>
+	<a href="{{path('test_photos')}}">Gallery</a>
+    <a href="{{path('test_update')}}/{{app.session.get('user_id')}}">View Profile</a>
+    </div>
+</div>
+
+</body>
+</html>

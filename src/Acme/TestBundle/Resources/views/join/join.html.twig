@@ -1,0 +1,90 @@
+{% extends 'AcmeTestBundle::layout.html.twig'%}
+
+{% block content %}
+	{{ parent() }}	
+{% endblock %}
+
+{% block middle %}
+<div class="middle">
+Welcome to Join page
+
+{% for flashMessage in app.session.flashbag.get('notice') %}
+ 
+<div class='alert alert-success'>{{ flashMessage }}</div>
+ 
+{% endfor %}
+
+
+<div class="form">
+{{ form_start(form , {attr :{novalidate:'novalidate'}}) }}
+<div style='width:530px;height:50px;'>
+	{{ form_label(form.firstName) }}
+	
+	{{ form_widget(form.firstName) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.firstName) }}
+</div>
+
+<div style='width:530px;height:50px;'>
+	{{ form_label(form.lastName) }}
+	
+	{{ form_widget(form.lastName) }}
+	
+</div>	
+<div class='errors'>
+	{{ form_errors(form.lastName) }}
+</div>
+
+<div style='width:530px;height:50px;'>
+	{{ form_label(form.address) }}
+	
+	{{ form_widget(form.address) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.address) }}
+</div>
+
+<div style='width:530px;height:50px;'>
+	{{ form_label(form.email) }}
+	
+	{{ form_widget(form.email) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.email) }}
+</div>
+
+<div style='width:530px;height:50px;'>
+	{{ form_label(form.phone) }}
+	
+	{{ form_widget(form.phone) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.phone) }}
+</div>
+
+<div style='width:530px;height:50px;' >
+	{{ form_label(form.birthDate) }}
+	
+	{{ form_widget(form.birthDate) }}
+	
+</div>
+<div class='errors'>
+	{{ form_errors(form.birthDate) }}
+</div>
+
+<div style='width:530px;float:left;margin-left:150px;' >
+	{{ form_widget(form.save) }}
+</div>	
+{{ form_end(form)}}
+</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+{% endblock %}
